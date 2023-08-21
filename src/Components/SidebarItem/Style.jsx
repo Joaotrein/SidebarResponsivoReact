@@ -3,19 +3,22 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  background-color: #1A202C; 
-  font-size: 20px;
+  font-size: 18px;
   color: white;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
-  border-radius: 10px;
-  margin: 0 15px 20px;
+  margin: 0 0px 20px;
 
   > svg {
     margin: 0 20px;
+    font-size: 25px;
   }
 
   &:hover {
-    background-color: black;
+  background-image: linear-gradient(
+    to right,
+    #FFB800 10px,
+    rgba(255, 255, 255, 0.1) 7px
+  ); 
   }
 `;

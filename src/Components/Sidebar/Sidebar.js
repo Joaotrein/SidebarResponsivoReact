@@ -1,16 +1,13 @@
 import React from 'react'
-import { Container, Content } from './Style'
-import { 
-  FaTimes, 
-  FaHome, 
-  FaEnvelope, 
-  FaRegSun, 
-  FaUserAlt, 
-  FaIdCardAlt, 
-  FaRegFileAlt,
-  FaRegCalendarAlt,
-  FaChartBar
-} from 'react-icons/fa'
+import { Container, Content } from './Style.jsx'
+import { TbCoinBitcoin } from "react-icons/tb"
+import { AiOutlineQuestionCircle } from "react-icons/ai"
+import { BsWallet2, BsGraphUpArrow, BsShieldLock, BsNewspaper } from "react-icons/bs"
+import { TbCoins } from "react-icons/tb";
+import { MdBalance } from "react-icons/md"
+import { RxExit } from "react-icons/rx"
+import { FaTimes } from "react-icons/fa"
+
 
 import SidebarItem from '../SidebarItem/SidebarItem'
 
@@ -22,16 +19,17 @@ const Sidebar = ({ active }) => {
 
   return (
     <Container sidebar={active}>
-      <FaTimes onClick={closeSidebar} />  
+      <FaTimes onClick={closeSidebar} />
       <Content>
-        <SidebarItem Icon={FaHome} Text="Home" />
-        <SidebarItem Icon={FaChartBar} Text="Statistics" />
-        <SidebarItem Icon={FaUserAlt} Text="Users" />
-        <SidebarItem Icon={FaEnvelope} Text="Mail" />
-        <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" />
-        <SidebarItem Icon={FaIdCardAlt} Text="Employees" />
-        <SidebarItem Icon={FaRegFileAlt} Text="Reports" />
-        <SidebarItem Icon={FaRegSun} Text="Settings" />
+        <SidebarItem Icon={TbCoinBitcoin} Text='O que são criptomoedas?' />
+        <SidebarItem Icon={AiOutlineQuestionCircle} Text="Para que elas servem?" />
+        <SidebarItem Icon={BsWallet2} Text="Como posso obte-lás?" />
+        <SidebarItem Icon={BsShieldLock} Text="Elas são seguras?" />
+        <SidebarItem Icon={TbCoins} Text="Quantas existem" />
+        <SidebarItem Icon={MdBalance} Text="Quais direitos eu possuo?" />
+        <SidebarItem Icon={BsGraphUpArrow} Text="Como investir?" />
+        <SidebarItem Icon={BsNewspaper} Text="Notícias" />
+        <SidebarItem Icon={RxExit} Text="Sair" />
       </Content>
     </Container>
   )
